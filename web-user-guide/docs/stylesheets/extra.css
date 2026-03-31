@@ -1,0 +1,256 @@
+/* =========================
+   BRAND COLOURS
+   ========================= */
+:root {
+  --fq-primary: #ee5630;
+  --fq-primary-dark: #9e2a00;
+  --fq-primary-light: #f36c4a;
+
+  --fq-light-bg: #ffffff;
+  --fq-light-surface: #f7f3f2;
+  --fq-light-panel: #f1e1de;
+  --fq-light-text: #2e2a28;
+  --fq-light-muted: #6a5854;
+  --fq-light-border: #e2d5d1;
+
+  --fq-dark-bg: #1a0f0f;
+  --fq-dark-surface: #241716;
+  --fq-dark-panel: #2b1c1b;
+  --fq-dark-text: #f2e8e5;
+  --fq-dark-muted: #bfa9a3;
+  --fq-dark-border: #3a2a27;
+}
+
+:root {
+  --md-primary-fg-color: var(--fq-primary);
+  --md-primary-fg-color--light: var(--fq-primary-light);
+  --md-primary-fg-color--dark: var(--fq-primary-dark);
+  --md-accent-fg-color: var(--fq-primary);
+}
+
+/* =========================
+   LIGHT MODE
+   ========================= */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: var(--fq-light-bg);
+  --md-default-bg-color--light: var(--fq-light-surface);
+  --md-default-bg-color--lighter: var(--fq-light-panel);
+
+  --md-default-fg-color: var(--fq-light-text);
+  --md-default-fg-color--light: var(--fq-light-muted);
+
+  --md-typeset-a-color: var(--fq-primary);
+  --md-code-bg-color: var(--fq-light-panel);
+}
+
+/* =========================
+   LIGHT HEADER VISIBILITY FIX
+   ========================= */
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-header__inner {
+  color: #2e2a28;
+}
+
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-header__button,
+[data-md-color-scheme="default"] .md-header__source,
+[data-md-color-scheme="default"] .md-search__icon,
+[data-md-color-scheme="default"] .md-icon {
+  color: #2e2a28 !important;
+  fill: #2e2a28 !important;
+}
+
+[data-md-color-scheme="default"] .md-header__button:hover,
+[data-md-color-scheme="default"] .md-search__icon:hover {
+  color: #ee5630 !important;
+  fill: #ee5630 !important;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--fq-dark-bg);
+  --md-default-bg-color--light: var(--fq-dark-surface);
+  --md-default-bg-color--lighter: var(--fq-dark-panel);
+
+  --md-default-fg-color: var(--fq-dark-text);
+  --md-default-fg-color--light: var(--fq-dark-muted);
+
+  --md-typeset-a-color: var(--fq-primary);
+  --md-code-bg-color: var(--fq-dark-surface);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+[data-md-color-scheme="default"] .md-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--fq-light-border);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--fq-dark-bg);
+  border-bottom: 1px solid var(--fq-dark-border);
+}
+
+/* =========================
+   LAYOUT
+   ========================= */
+.md-grid {
+  max-width: 1380px;
+}
+
+.md-sidebar {
+  padding-top: 1rem;
+}
+
+.md-sidebar__scrollwrap {
+  padding: 0 0.5rem;
+}
+
+[data-md-color-scheme="default"] .md-sidebar__scrollwrap {
+  background: var(--fq-light-surface);
+  border: 1px solid var(--fq-light-border);
+  border-radius: 1.25rem;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap {
+  background: var(--fq-dark-surface);
+  border: 1px solid var(--fq-dark-border);
+  border-radius: 1.25rem;
+}
+
+/* Sidebar title */
+.md-nav__title {
+  font-weight: 700;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
+
+[data-md-color-scheme="default"] .md-nav__title {
+  background: #ffffff;
+  color: var(--fq-light-text);
+  border: 1px solid var(--fq-light-border);
+}
+
+[data-md-color-scheme="slate"] .md-nav__title {
+  background: var(--fq-dark-panel);
+  color: var(--fq-dark-text);
+  border: 1px solid var(--fq-dark-border);
+}
+
+/* =========================
+   SINGLE-DEPTH BIG NAV BUTTONS
+   ========================= */
+.md-nav--primary .md-nav__list {
+  padding: 0.4rem 0.5rem 0.8rem;
+}
+
+.md-nav--primary .md-nav__item {
+  margin: 0.35rem 0;
+}
+
+.md-nav--primary .md-nav__link {
+  display: block;
+  /* font-size: 1rem; */
+  /* font-weight: 500; */
+  line-height: 1.25;
+  padding: 0.95rem 1.15rem;
+  border-radius: 999px;
+  transition: background-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+
+/* Normal links */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__link {
+  color: var(--fq-light-text);
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link {
+  color: var(--fq-dark-text);
+}
+
+/* Hover */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__link:hover {
+  background: #fff3ef;
+  color: var(--fq-primary);
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link:hover {
+  background: #33211f;
+  color: #ffffff;
+}
+
+/* Active pill button */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__link--active {
+  background: linear-gradient(180deg, #f06a44 0%, #ee5630 100%);
+  color: #ffffff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active {
+  background: linear-gradient(180deg, #b33200 0%, #9e2a00 100%);
+  color: #ffffff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+/* Hide nested-tree visual treatment */
+.md-nav__list .md-nav__list {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none !important;
+}
+
+/* =========================
+   TOC SIDEBAR
+   ========================= */
+.md-sidebar--secondary .md-nav {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--secondary .md-nav {
+  background: var(--fq-light-surface);
+  border: 1px solid var(--fq-light-border);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav {
+  background: var(--fq-dark-surface);
+  border: 1px solid var(--fq-dark-border);
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+[data-md-color-scheme="default"] .md-content {
+  background-color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-content {
+  background-color: var(--fq-dark-bg);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.md-typeset .md-button {
+  border-radius: 999px;
+  padding: 0.7em 1.3em;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+[data-md-color-scheme="default"] .md-typeset .md-button,
+[data-md-color-scheme="default"] .md-typeset .md-button--primary {
+  background: var(--fq-primary);
+  border-color: var(--fq-primary);
+  color: white;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button,
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary {
+  background: var(--fq-primary-dark);
+  border-color: var(--fq-primary-dark);
+  color: white;
+}
